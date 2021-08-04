@@ -1,0 +1,14 @@
+bscfullnode:
+    container_name: bscfullnode
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+      - "6060:6060"
+      - "30311:30311"
+      - "30311:30311/udp"
+    hostname: bscfullnode
+    privileged: true
+    build: .
+    restart: always
+    volumes:
+      - /Volumes/data/bscfullnode:/root
