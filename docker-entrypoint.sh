@@ -26,7 +26,7 @@ if [ "$1" = "bsc" ]; then
 
   echo "$0: setting data directory to $BSC_DATADIR"
 
-  set -- "$@" --datadir "$BSC_DATADIR" --config $BSC_DATADIR/config.toml 
+  set -- "$@" --datadir "$BSC_DATADIR" --config $BSC_DATADIR/config.toml --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0
 fi
 
 echo

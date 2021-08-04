@@ -12,6 +12,19 @@ Blockchain data will be stored at `/data/bsc` folder.
 
 `config.toml` will be created if not exists at `/data/bsc/.ethereum/config.toml`
 
+```bash
+## mainet
+wget https://github.com/binance-chain/bsc/releases/download/v1.1.0-beta/mainnet.zip
+unzip mainnet.zip
+
+## testnet
+## wget https://github.com/binance-chain/bsc/releases/download/v1.1.0-beta/testnet.zip
+## unzip testnet.zip
+
+geth --datadir node init genesis.json
+geth --config ./config.toml --datadir ./node  --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0
+```
+
 ## Check sync status
 
 ```
